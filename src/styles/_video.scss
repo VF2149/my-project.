@@ -1,0 +1,37 @@
+.video {
+    @include full-bleed;
+
+    background: url("../images/video-background.jpg") center/cover no-repeat;
+    color: $color-white;
+    min-height: 100vh;
+
+    &__inner {
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: $spacing-lg 0;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: $font-heading;
+        font-size: 4rem;
+        margin-bottom: $spacing-lg;
+    }
+
+    .button--video {
+        background: $color-primary;
+        border-radius: 50%;
+        width: 15vh;
+        height: 15vh;
+        font-size: 4rem;
+        color: $color-white;
+        transition: transform 0.3s;s
+
+    &__text {
+        max-width: 60vh;
+        margin: 0 auto;
+        font-size: 1.8rem;
+        line-height: 1.4;
+    }
+}
+}

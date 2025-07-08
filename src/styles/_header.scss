@@ -1,0 +1,50 @@
+.header {
+    @include full-bleed;
+
+    background-color: $color-bg-dark;
+
+    &__inner {
+        max-width: $max-width;
+        margin: 0 auto;
+
+        @include flex-center(row, space-between, center);
+
+        padding: $spacing-md;
+    }
+
+    &__logo {
+        color: $color-white;
+    }
+
+    &__nav {
+        .nav__list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: $spacing-md;
+            align-items: center;
+        }
+
+        .nav__item {
+            margin: 0;
+        }
+
+        .nav__link {
+            display: block;
+            padding: $spacing-sm $spacing-md;
+            color: $color-white;
+            position: relative;
+
+            @include hover-border($color-primary);
+        }
+
+        .nav__item--active .nav__link {
+            border-bottom: 2px solid $color-primary;
+        }
+    }
+
+    &__toggle {
+        display: none;
+    }
+}

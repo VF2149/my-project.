@@ -1,0 +1,42 @@
+.headline {
+    @include full-bleed;
+
+    min-height: 100vh;
+    background-image: url("../images/wine-background.png");
+    background-position: center right;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__inner {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: $spacing-lg 0;
+        height: 100%;
+    }
+
+    &__content {
+        width: 50%;
+        color: $color-white;
+
+        .headline__logo {
+            display: block;
+            margin-bottom: $spacing-md;
+            max-width: 15vw;
+            width: 100%;
+            height: auto;
+        }
+
+        .headline__title {
+            font-family: $font-heading;
+            font-size: 5rem;
+            line-height: 1.2;
+            margin-bottom: $spacing-sm;
+        }
+
+        .headline__text {
+            font-size: 1.125rem;
+        }
+    } }

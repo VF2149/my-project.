@@ -1,0 +1,237 @@
+// src/styles/mobile.scss
+
+// 1) Планшеты и большие смартфоны (≤768px)
+@media (width <=768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    // Бургер-меню
+    .header {
+        position: relative;
+
+        &__toggle {
+            display: block;
+            position: relative;
+            z-index: 1100;
+            font-size: 1.5rem;
+            color: $color-white;
+            background: none;
+            border: none;
+        }
+
+        &__nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: $color-bg-dark;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        &__nav.nav--open {
+            display: flex;
+        }
+
+        .nav__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-lg;
+            align-items: center;
+        }
+
+        .nav__link {
+            display: block;
+            padding: $spacing-md 0;
+            font-size: 1.25rem;
+            color: $color-white;
+
+            @include hover-border($color-primary);
+        }
+    }
+
+    
+    .headline {
+        background-image: url("../images/mobile-background.png");
+        background-position: center left;
+        background-size: cover;
+        position: relative !important;
+        overflow: hidden !important;
+
+        &__inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: $max-width;
+            margin: 0 auto;
+            padding: $spacing-md 0;
+            height: 100%;
+        }
+
+        &__content {
+            width: 100%;
+            text-align: center;
+
+            .headline__logo {
+                display: block;
+                margin: 0 auto $spacing-md;
+                max-width: 30vw;
+                width: 100%;
+                height: auto;
+            }
+
+            .headline__title {
+                font-size: 3rem;
+                margin-bottom: $spacing-lg;
+            }
+
+            .headline__text {
+                font-size: 1rem;
+                max-width: 30vh;
+                margin: 0 auto $spacing-md;
+            }
+        }
+    }
+
+   .information {
+        &__inner {
+            max-width: $max-width;
+            margin: 0 auto;
+            padding: $spacing-md;
+        }
+
+        &__columns {
+            grid-template-columns: 1fr;
+            gap: $spacing-sm;
+            margin-bottom: $spacing-lg;
+        }
+
+        &__headline {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        &__subhead {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        &__text1,
+        &__text2 {
+            font-size: 1rem;
+            text-align: left;
+        }
+    }
+
+    
+    .video {
+        background-position: 80% center;
+
+        &__inner {
+            max-width: $max-width;
+            margin: 0 auto;
+            padding: $spacing-md 0;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 4rem;
+        }
+
+        &__text {
+            max-width: 75vw;
+            font-size: 1.5rem;
+        }
+
+        &__wrapper {
+            width: 60vw;
+            height: 20vh;
+        }
+
+        .button--video {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+        }
+    }
+
+    .footer {
+        &__inner {
+            
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            gap: $spacing-xs;
+            padding: $spacing-sm 0;
+            text-align: center;
+        }
+
+        
+        &__branding,
+        &__contacts,
+        &__copy {
+            margin: 0;
+        }
+
+        &__contacts {
+
+            
+            a {
+                display: inline-block;
+                margin-top: $spacing-xs;
+            }
+        }
+    }
+}
+
+// 2)
+@media (width <=480px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .headline {
+        &__title {
+            font-size: 1.75rem;
+        }
+
+        &__text {
+            font-size: 0.9rem;
+        }
+    }
+
+    .information {
+        &__headline {
+            font-size: 1.8rem;
+        }
+
+        &__subhead,
+        &__text1,
+        &__text2 {
+            font-size: 1rem;
+        }
+    }
+
+    .video {
+        &__title {
+            font-size: 2.5rem;
+        }
+
+        &__text {
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.information {
+    @include full-bleed;
+
+    background-color: $color-white;
+    min-height: 100vh;
+
+    &__inner {
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: $spacing-lg 0;
+        text-align: center;
+    }
+
+    &__headline {
+        font-family: $font-heading;
+        font-size: 4rem;
+        margin-bottom: $spacing-lg;
+    }
+
+    &__subhead {
+        color: #666;
+        margin-bottom: $spacing-lg;
+        font-size: 1.7rem;
+    }
+
+    &__columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $spacing-md;
+        margin-bottom: $spacing-lg;
+    }
+
+    &__text1,
+    &__text2 {
+        color: #666;
+        font-size: 1.125rem;
+        line-height: 1.6;
+        margin: 0;
+        text-align: left;
+    }
+
+    &__actions {
+        .button--read-more {
+            background: $color-primary;
+            color: $color-white;
+            padding: $spacing-sm $spacing-lg;
+            border-radius: 999px;
+            font-weight: bold;
+           
+        }
+    }
+}

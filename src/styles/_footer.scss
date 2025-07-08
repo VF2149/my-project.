@@ -1,0 +1,54 @@
+.footer {
+    @include full-bleed;
+
+    background-color: $color-bg-dark;
+    color: $color-white;
+
+    &__inner {
+        max-width: $max-width;
+        margin: 0 auto;
+
+        @include flex-center(row, space-between, center);
+
+        padding: $spacing-md $spacing-lg;
+    }
+
+    
+
+    &__contacts {
+        font-size: 0.9rem;
+
+        a {
+            color: $color-primary;
+
+            @include hover-border(lighten($color-primary, 20%));
+        }
+
+        p+p {
+            margin-top: $spacing-sm;
+        }
+    }
+
+        &__branding {
+            .footer__logo {
+                display: block;
+                width: 70px;
+                height: auto;
+            }
+    
+            .footer__brand-title {
+                margin-top: $spacing-sm;
+                color: $color-white;
+                font-family: $font-heading;
+                font-size: 1rem;
+                text-transform: uppercase;
+                text-decoration: none;
+    
+                @include hover-border($color-primary);
+            }
+        }
+
+    &__copy {
+        font-size: 0.8rem;
+    }
+}
