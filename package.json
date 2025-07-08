@@ -1,0 +1,30 @@
+{
+  "scripts": {
+    "test": "jest --reporters=jest-junit",
+    "build": "npm run prod",
+    "sass": "sass src/styles/style.scss src/dist/style.css",
+    "sass:min": "sass src/styles/style.scss src/dist/style.min.css --style=compressed",
+    "prod": "npm run sass && npm run sass:min",
+    "lint": "stylelint '**/*.scss'",
+    "format": "prettier --write '**/*.{js,scss,css,html}'"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "prettier": "^3.6.1",
+    "sass": "^1.89.2",
+    "stylelint": "^16.21.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
+    "html-validate": "^8.7.4",
+    "jest-junit": "^13.2.0",
+    "jsdom": "^19.0.0",
+    "parse-gitignore": "^2.0.0"
+  },
+  "jest-junit": {
+    "suiteName": "junit test results",
+    "outputDirectory": ".",
+    "outputName": "junit.xml"
+  }
+}
